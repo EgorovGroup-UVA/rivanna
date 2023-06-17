@@ -10,16 +10,16 @@
 #SBATCH --ntasks-per-node=40
 #
 # -t <Wallclock time, d-hh:mm:ss>
-#SBATCH -t 0-10:00:00
+#SBATCH -t 0-00:00:00
 #
 # -p <queue name>; 
 #SBATCH -p standard
 #
 # - A <account to be charged>
-#SBATCH -A chem3811
+#SBATCH -A softcompt
 #
 # -o <output file name>
 #SBATCH -o case3.out
 module load gcc
 module load openmpi
-mpirun -np 40 /home/mjs7eek/lammps/build/lmp -in input.lammps
+mpirun -np 40 PATH/lmp -in input.lammps
